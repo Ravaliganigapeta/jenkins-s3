@@ -12,7 +12,7 @@ pipeline {
          }
       }
    }
-  stage('Terraform Init') {
+  stage('Provision S3 Bucket') {
             steps {
                 dir('terraform') {
                     sh 'terraform init'
