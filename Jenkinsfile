@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Terraform Init') {
             steps {
-                sh "terraform init"
+                sh "terraform init -backend-config='access_key'='AKIARZKPS5HWFBQX4EVG' -backend-config='secret_key='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'"
+            }
         }
         stage('Terraform Action') {
             steps {
@@ -22,6 +23,6 @@ pipeline {
             }
         }
     }
- }
 }
+
 
