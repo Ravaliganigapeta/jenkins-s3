@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Terraform plan') {
             steps {
-                sh "terraform plan -backend-config='access_key'='AKIARZKPS5HWFBQX4EVG' -backend-config='secret_key'='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'"
+                sh "terraform plan"
             }
         }
         stage('Terraform Action') {
