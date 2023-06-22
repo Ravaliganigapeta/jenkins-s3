@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "Tf-bucket" {
-  bucket = "bucket1505" // Bucket name must be globally unique and must not contain spaces or uppercase letters. Name of the bucket. If omitted,Terraform will assign a random, unique name.
+  bucket = "first-bucket1505" // Bucket name must be globally unique and must not contain spaces or uppercase letters. Name of the bucket. If omitted,Terraform will assign a random, unique name.
   acl    = "private" // Each ACL has a predefined set of grantees and permissions.
 
  
