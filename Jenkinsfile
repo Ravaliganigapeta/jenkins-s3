@@ -14,8 +14,14 @@ pipeline {
         }
         stage('Terraform Action') {
             steps {
-                sh "terraform apply"
-                sh "terraform ${action} --auto-approve"
+                input(message: 'Click "proceed" to approve the above Terraform Plan')
+                sh(
+                    label:  'Terraform Apply',
+                    script: 'terraform ${action} --auto-approve'
+                )
+                //sh "terraform apply"
+                
+                //sh "terraform ${action} --auto-approve"
             }
         }
     }
